@@ -16,15 +16,17 @@ services:
         volumes:
             - ./app:/app
     mysql:
-        image: mariadb:latest
+        image: mysql:latest
         environment:
             MYSQL_ROOT_PASSWORD: 'secret'
-            MYSQL_USER: 'tutorial'
+            MYSQL_USER: 'user'
             MYSQL_PASSWORD: 'secret'
-            MYSQL_DATABASE: 'tutorial'
+            MYSQL_DATABASE: 'docker-php'
         volumes:
             - mysqldata:/var/lib/mysql
         ports:
             - 3306:3306
+            #if MYSQL is running you'll need to change 3306:3306 to 4306:3306 or something else
+        restart: unless-stopped
 volumes:
     mysqldata: {}
