@@ -1,3 +1,6 @@
-<?php
+<?php ?>
 
-echo 'Hello World peepeepoopoo';
+<!doctype html>
+<html lang="en">
+<h1>'PeePee PooPoo'</h1>
+</html>
